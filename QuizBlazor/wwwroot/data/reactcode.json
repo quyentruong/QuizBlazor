@@ -1,0 +1,212 @@
+[
+  {
+    "Question": "How to render a React component inside a DOM element with the ID 'root'?",
+    "Answers": [
+      {
+        "Name": "```javascript\nReactDOM.render(<App />, document.getElementById('root'));\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```javascript\nReact.render(<App />, document.getElementById('root'));\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\nReactDOM.render(App, 'root');\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\nReact.render(App, 'root');\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "How to define a functional component in React?",
+    "Answers": [
+      {
+        "Name": "```javascript\nfunction MyComponent() {\n  return <div>Hello World!</div>;\n}\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```javascript\nclass MyComponent extends React.Component {\n  render() {\n    return <div>Hello World!</div>;\n  }\n}\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\nconst MyComponent = () => {\n  return <div>Hello World!</div>;\n}\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\nconst MyComponent = () => <div>Hello World!</div>;\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "How to set the initial state of a class component in React?",
+    "Answers": [
+      {
+        "Name": "```javascript\nthis.state = { count: 0 };\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```javascript\nthis.state.count = 0;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\nthis.setState({ count: 0 });\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\nthis.setState.count = 0;\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "How to handle user input changes in React using state?",
+    "Answers": [
+      {
+        "Name": "```javascript\nhandleChange(event) {\n  this.setState({ value: event.target.value });\n}\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```javascript\nhandleChange(event) {\n  event.target.value = this.state.value;\n}\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\nhandleChange(event) {\n  this.state.value = event.target.value;\n}\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\nhandleChange(event) {\n  event.target.value = this.state.value;\n  this.setState({ value: event.target.value });\n}\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "How to pass data from a parent component to a child component in React?",
+    "Answers": [
+      {
+        "Name": "```javascript\n<ChildComponent data={this.state.data} />\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```javascript\n<ChildComponent>{this.state.data}</ChildComponent>\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\n<ChildComponent>this.state.data</ChildComponent>\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\n<ChildComponent>{data: this.state.data}</ChildComponent>\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "How to handle form submissions in React?",
+    "Answers": [
+      {
+        "Name": "```javascript\ndefault handleSubmit(event) {\n  event.preventDefault();\n  // Handle form submission logic\n}\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```javascript\ndefault handleSubmit(event) {\n  // Handle form submission logic\n}\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\ndefault handleSubmit() {\n  event.preventDefault();\n  // Handle form submission logic\n}\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\ndefault handleSubmit(event) {\n  event.stopPropagation();\n  // Handle form submission logic\n}\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "How to conditionally render content in React?",
+    "Answers": [
+      {
+        "Name": "```javascript\n{isLoggedIn ? <Welcome /> : <Login />}\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```javascript\n{isLoggedIn && <Welcome /> || <Login />}\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\n{isLoggedIn ? <Welcome /> && <Login />}\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\n{isLoggedIn || <Welcome /> && <Login />}\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "How to handle events in React using arrow functions?",
+    "Answers": [
+      {
+        "Name": "```javascript\n<button onClick={() => this.handleClick()}>Click me</button>\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```javascript\n<button onClick={this.handleClick()}>Click me</button>\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\n<button onClick={this.handleClick}>Click me</button>\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\n<button onClick={() => this.handleClick}>Click me</button>\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "How to perform AJAX requests in React?",
+    "Answers": [
+      {
+        "Name": "```javascript\nimport axios from 'axios';\n\naxios.get('/api/data')\n  .then(response => {\n    // Handle response\n  })\n  .catch(error => {\n    // Handle error\n  });\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```javascript\nfetch('/api/data')\n  .then(response => response.json())\n  .then(data => {\n    // Handle data\n  })\n  .catch(error => {\n    // Handle error\n  });\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\nimport { ajax } from 'jquery';\n\najax({\n  url: '/api/data',\n  method: 'GET',\n  success: (response) => {\n    // Handle response\n  },\n  error: (error) => {\n    // Handle error\n  }\n});\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\nimport { fetch } from 'isomorphic-fetch';\n\nfetch('/api/data')\n  .then(response => {\n    // Handle response\n  })\n  .catch(error => {\n    // Handle error\n  });\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "How to update the state in a functional component using the useState hook?",
+    "Answers": [
+      {
+        "Name": "```javascript\nconst [count, setCount] = useState(0);\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```javascript\nconst [count] = useState(0);\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\nconst [count, updateCount] = useState(0);\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```javascript\nconst [count] = useState(() => 0);\n```",
+        "IsCorrect": false
+      }
+    ]
+  }
+]
