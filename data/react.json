@@ -1,0 +1,423 @@
+[
+  {
+    "Question": "What is React?",
+    "Answers": [
+      {
+        "Name": "A JavaScript library for building user interfaces",
+        "IsCorrect": true
+      },
+      {
+        "Name": "A programming language",
+        "IsCorrect": false
+      },
+      {
+        "Name": "A server-side framework",
+        "IsCorrect": false
+      },
+      {
+        "Name": "A database management system",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What does JSX stand for?",
+    "Answers": [
+      {
+        "Name": "JavaScript XML",
+        "IsCorrect": true
+      },
+      {
+        "Name": "JavaScript Syntax Extension",
+        "IsCorrect": false
+      },
+      {
+        "Name": "JavaScript Syntax eXecution",
+        "IsCorrect": false
+      },
+      {
+        "Name": "JavaScript eXtensible Stylesheet",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is a component in React?",
+    "Answers": [
+      {
+        "Name": "A reusable, self-contained piece of UI",
+        "IsCorrect": true
+      },
+      {
+        "Name": "A built-in JavaScript function",
+        "IsCorrect": false
+      },
+      {
+        "Name": "A predefined HTML element",
+        "IsCorrect": false
+      },
+      {
+        "Name": "A data storage structure",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is state in React?",
+    "Answers": [
+      {
+        "Name": "An object that represents the data of a component",
+        "IsCorrect": true
+      },
+      {
+        "Name": "A keyword used for looping in JavaScript",
+        "IsCorrect": false
+      },
+      {
+        "Name": "A JavaScript module for importing code",
+        "IsCorrect": false
+      },
+      {
+        "Name": "A React-specific HTML attribute",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is the purpose of the componentDidMount lifecycle method?",
+    "Answers": [
+      {
+        "Name": "To perform actions after the component is mounted",
+        "IsCorrect": true
+      },
+      {
+        "Name": "To render the component on the screen",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To update the component's state",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To handle user input events",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is the purpose of the render method in React?",
+    "Answers": [
+      {
+        "Name": "To render the component's UI based on its current state",
+        "IsCorrect": true
+      },
+      {
+        "Name": "To define the component's initial state",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To handle user interactions with the component",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To perform cleanup tasks when the component is unmounted",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is React Router used for?",
+    "Answers": [
+      {
+        "Name": "To handle client-side routing in a React application",
+        "IsCorrect": true
+      },
+      {
+        "Name": "To manage the state of a React component",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To connect React components to a Redux store",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To make HTTP requests in a React application",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is the purpose of PropTypes in React?",
+    "Answers": [
+      {
+        "Name": "To define the expected types of component props",
+        "IsCorrect": true
+      },
+      {
+        "Name": "To validate the component's state",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To create reusable UI components",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To handle asynchronous operations in React",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What are React hooks?",
+    "Answers": [
+      {
+        "Name": "Functions that allow functional components to have state and lifecycle methods",
+        "IsCorrect": true
+      },
+      {
+        "Name": "Built-in React components for common UI elements",
+        "IsCorrect": false
+      },
+      {
+        "Name": "Methods for handling user events in React",
+        "IsCorrect": false
+      },
+      {
+        "Name": "Libraries used for server-side rendering in React",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is the purpose of the useEffect hook in React?",
+    "Answers": [
+      {
+        "Name": "To perform side effects in functional components",
+        "IsCorrect": true
+      },
+      {
+        "Name": "To handle form submissions in React",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To manage global state in a React application",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To create reusable custom hooks in React",
+        "IsCorrect": false
+      }
+    ]
+  },
+
+  {
+    "Question": "What is a React component lifecycle?",
+    "Answers": [
+      {
+        "Name": "A set of methods that are invoked at different stages of a component's life",
+        "IsCorrect": true
+      },
+      {
+        "Name": "The duration of time a component remains on the screen",
+        "IsCorrect": false
+      },
+      {
+        "Name": "The maximum number of child components a component can have",
+        "IsCorrect": false
+      },
+      {
+        "Name": "A React-specific design pattern for building UI",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is the purpose of the shouldComponentUpdate method?",
+    "Answers": [
+      {
+        "Name": "To control whether a component should re-render or not",
+        "IsCorrect": true
+      },
+      {
+        "Name": "To handle errors that occur during component rendering",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To fetch data from an API before rendering the component",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To set the initial state of a component",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What are controlled components in React?",
+    "Answers": [
+      {
+        "Name": "Components where the value of form elements is controlled by React state",
+        "IsCorrect": true
+      },
+      {
+        "Name": "Components that are rendered conditionally based on a boolean value",
+        "IsCorrect": false
+      },
+      {
+        "Name": "Components that handle user interactions without updating the state",
+        "IsCorrect": false
+      },
+      {
+        "Name": "Components that manage global application state in Redux",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is the purpose of the React Fragment component?",
+    "Answers": [
+      {
+        "Name": "To group multiple elements without introducing additional nodes in the DOM",
+        "IsCorrect": true
+      },
+      {
+        "Name": "To create custom reusable components in React",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To handle form submissions in React",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To make AJAX requests in a React application",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is React context?",
+    "Answers": [
+      {
+        "Name": "A way to share data between components without passing props manually at every level",
+        "IsCorrect": true
+      },
+      {
+        "Name": "A technique to encapsulate and reuse UI components",
+        "IsCorrect": false
+      },
+      {
+        "Name": "A library for styling React components",
+        "IsCorrect": false
+      },
+      {
+        "Name": "A method to define the initial state of a component",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is the purpose of the React Router Link component?",
+    "Answers": [
+      {
+        "Name": "To create links for client-side navigation in a React application",
+        "IsCorrect": true
+      },
+      {
+        "Name": "To handle form submissions in React",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To manage the state of a React component",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To make HTTP requests in a React application",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is the role of the Redux library in React applications?",
+    "Answers": [
+      {
+        "Name": "To manage global state and handle complex state management in React",
+        "IsCorrect": true
+      },
+      {
+        "Name": "To create and manage forms in React",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To handle client-side routing in a React application",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To handle asynchronous operations in React",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is the purpose of the useMemo hook in React?",
+    "Answers": [
+      {
+        "Name": "To memoize the value of a function to optimize performance",
+        "IsCorrect": true
+      },
+      {
+        "Name": "To handle form submissions in React",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To create reusable custom hooks in React",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To perform side effects in functional components",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is the purpose of the useReducer hook in React?",
+    "Answers": [
+      {
+        "Name": "To manage state using a reducer function and dispatch actions",
+        "IsCorrect": true
+      },
+      {
+        "Name": "To handle form submissions in React",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To manage global state in a React application",
+        "IsCorrect": false
+      },
+      {
+        "Name": "To create reusable custom hooks in React",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "What is React lazy loading?",
+    "Answers": [
+      {
+        "Name": "A technique to load components asynchronously when they are needed",
+        "IsCorrect": true
+      },
+      {
+        "Name": "A method to optimize rendering performance in React",
+        "IsCorrect": false
+      },
+      {
+        "Name": "A way to handle user interactions with a React component",
+        "IsCorrect": false
+      },
+      {
+        "Name": "A technique to handle server-side rendering in React",
+        "IsCorrect": false
+      }
+    ]
+  }
+]
