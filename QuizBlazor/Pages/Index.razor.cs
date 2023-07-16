@@ -1,12 +1,14 @@
 using System.Net.Http.Json;
+using System.Text.Json.Serialization;
 using MoreLinq;
+using Newtonsoft.Json;
 using QuizBlazor.Models;
+using QuizBlazor.Utils;
 
 namespace QuizBlazor.Pages
 {
     public partial class Index
     {
-        private string Value { get; } = "text *italics* and **bold**";
         private int currentQuesNumber = 0;
         private string selectedOption = string.Empty;
 
@@ -20,7 +22,8 @@ namespace QuizBlazor.Pages
 
         protected override async Task OnInitializedAsync()
         {
-            quizzes = await Http.GetFromJsonAsync<List<Quiz>>("data/sqlcode.json");
+            var quizDeflate = await Http.GetStringAsync("deflate/sqlcode.txt");
+            quizzes = JsonConvert.DeserializeObject<List<Quiz>>(BasicUtility.DecompressStringDeflate(quizDeflate));
             randomQuizzes = quizzes?.RandomSubset(maxQuestion).ToList();
         }
 

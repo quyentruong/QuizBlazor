@@ -66,11 +66,11 @@
                     <MudStack Row="true">
                         @if (currentQuesNumber == randomQuizzes.Count() - 1)
                         {
-                            <MudButton OnClick="()=>Restart()">Restart</MudButton>
+                            <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Autorenew" Color="Color.Primary" OnClick="()=>Restart()">Restart</MudButton>
                         }
                         else
                         {
-                            <MudButton OnClick="()=>NextQuestion()">Next Question</MudButton>
+                            <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.ChevronRight" Color="Color.Info" OnClick="()=>NextQuestion()">Next Question</MudButton>
                         }
                     </MudStack>
 
