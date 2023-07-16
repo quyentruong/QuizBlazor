@@ -1,0 +1,43 @@
+name: github pages
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - QuizBlazor/**
+  # Lines below let you run workflow manually and on each commit
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the code
+      - uses: actions/checkout@v3
+
+      # Install .NET Core SDK
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 7.0.x
+
+      # Install dotnet wasm buildtools workload
+      - name: Install .NET WASM Build Tools
+        run: dotnet workload install wasm-tools
+
+      # Publish the site
+      - name: Publish .NET Core Project
+        run: dotnet publish QuizBlazor/QuizBlazor.csproj -c:Release -o dist/QuizBlazor -p:GHPages=true --nologo
+
+      # Deploy the site
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          TOKEN: ${{ secrets.TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist/QuizBlazor/wwwroot
+          
