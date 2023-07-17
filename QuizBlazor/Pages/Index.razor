@@ -51,6 +51,8 @@
             else
             {
                 <MudItem xs="12" sm="10">
+                    <MudText>Question @(currentQuesNumber + 1) of @maxQuestion</MudText>
+                    <MudText Class="d-inline-flex" Typo="Typo.h5">@q.Question</MudText>
                     <MudStack Row="false">
                         @if (selectedOption.Equals("False"))
                         {
