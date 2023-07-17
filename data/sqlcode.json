@@ -208,5 +208,215 @@
         "IsCorrect": false
       }
     ]
+  },
+  {
+    "Question": "Retrieve the distinct product names from the 'products' table.",
+    "Answers": [
+      {
+        "Name": "```sql\nSELECT DISTINCT name\nFROM products;\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```sql\nSELECT name\nFROM products\nGROUP BY name;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT name\nFROM products\nWHERE name IS DISTINCT;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT DISTINCT(name)\nFROM products;\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "Retrieve the average price of products in each category.",
+    "Answers": [
+      {
+        "Name": "```sql\nSELECT category, AVG(price) AS average_price\nFROM products\nGROUP BY category;\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```sql\nSELECT category, AVG(price)\nFROM products\nGROUP BY category;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT category, average_price\nFROM products\nGROUP BY category;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT category, AVG(price) AS price\nFROM products\nGROUP BY category;\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "Retrieve the customers who have made at least two orders.",
+    "Answers": [
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nGROUP BY customer_id\nHAVING COUNT(*) >= 2;\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nWHERE COUNT(*) >= 2;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nGROUP BY customer_id\nHAVING COUNT(*) > 1;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nGROUP BY customer_id\nCOUNT(*) >= 2;\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "Retrieve the customers who have placed an order in the year 2022.",
+    "Answers": [
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nWHERE YEAR(order_date) = 2022;\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nWHERE order_date LIKE '%2022%';\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nWHERE EXTRACT(YEAR FROM order_date) = 2022;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nWHERE order_date BETWEEN '2022-01-01' AND '2022-12-31';\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "Retrieve the products with a price higher than the average price.",
+    "Answers": [
+      {
+        "Name": "```sql\nSELECT *\nFROM products\nWHERE price > (SELECT AVG(price) FROM products);\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```sql\nSELECT *\nFROM products\nWHERE price > AVG(price);\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT *\nFROM products\nWHERE price > AVG(price) OVER ();\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT *\nFROM products\nWHERE price > (AVG(price) FROM products);\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "Retrieve the customers who have not placed any orders.",
+    "Answers": [
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM customers\nWHERE customer_id NOT IN (SELECT DISTINCT customer_id FROM orders);\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM customers\nLEFT JOIN orders ON customers.customer_id = orders.customer_id\nWHERE orders.customer_id IS NULL;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM customers\nLEFT JOIN orders ON customers.customer_id = orders.customer_id\nWHERE orders.order_id IS NULL;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM customers\nWHERE customer_id NOT IN (SELECT customer_id FROM orders);\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "Retrieve the sales amount for each month in the year 2021.",
+    "Answers": [
+      {
+        "Name": "```sql\nSELECT DATE_FORMAT(order_date, '%Y-%m') AS month, SUM(quantity * price) AS sales_amount\nFROM orders\nWHERE YEAR(order_date) = 2021\nGROUP BY month;\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```sql\nSELECT EXTRACT(MONTH FROM order_date) AS month, SUM(quantity * price) AS sales_amount\nFROM orders\nWHERE YEAR(order_date) = 2021\nGROUP BY month;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT DATE_FORMAT(order_date, '%Y-%m') AS month, SUM(quantity * price) AS sales_amount\nFROM orders\nWHERE order_date BETWEEN '2021-01-01' AND '2021-12-31'\nGROUP BY month;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT MONTH(order_date) AS month, SUM(quantity * price) AS sales_amount\nFROM orders\nWHERE YEAR(order_date) = 2021\nGROUP BY month;\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "Retrieve the customers who have placed orders for all products.",
+    "Answers": [
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nGROUP BY customer_id\nHAVING COUNT(DISTINCT product_id) = (SELECT COUNT(*) FROM products);\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nGROUP BY customer_id\nHAVING COUNT(DISTINCT product_id) >= (SELECT COUNT(*) FROM products);\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nWHERE COUNT(DISTINCT product_id) = (SELECT COUNT(*) FROM products);\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nGROUP BY customer_id\nWHERE COUNT(DISTINCT product_id) >= (SELECT COUNT(*) FROM products);\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "Retrieve the customers who have placed orders in at least two different years.",
+    "Answers": [
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nGROUP BY customer_id\nHAVING COUNT(DISTINCT YEAR(order_date)) >= 2;\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nGROUP BY customer_id\nHAVING COUNT(DISTINCT EXTRACT(YEAR FROM order_date)) >= 2;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nWHERE COUNT(DISTINCT YEAR(order_date)) >= 2;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT customer_id\nFROM orders\nGROUP BY customer_id\nWHERE COUNT(DISTINCT YEAR(order_date)) >= 2;\n```",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Question": "Retrieve the products that have been ordered at least 3 times.",
+    "Answers": [
+      {
+        "Name": "```sql\nSELECT product_id\nFROM orders\nGROUP BY product_id\nHAVING COUNT(*) >= 3;\n```",
+        "IsCorrect": true
+      },
+      {
+        "Name": "```sql\nSELECT product_id\nFROM orders\nGROUP BY product_id\nHAVING COUNT(*) > 3;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT product_id\nFROM orders\nWHERE COUNT(*) >= 3;\n```",
+        "IsCorrect": false
+      },
+      {
+        "Name": "```sql\nSELECT product_id\nFROM orders\nGROUP BY product_id\nWHERE COUNT(*) >= 3;\n```",
+        "IsCorrect": false
+      }
+    ]
   }
 ]

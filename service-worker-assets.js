@@ -13,11 +13,11 @@
       "url": "data\/reactcode.json"
     },
     {
-      "hash": "sha256-sbhRpkvdri+NsFlMya+7BK\/TxQF8AN6r6F1zItZtSp0=",
+      "hash": "sha256-+2PaaIVPK1jA\/+9oTdMZ0mJXkjSB3AaOo4rewmf95sc=",
       "url": "data\/sqlcode.json"
     },
     {
-      "hash": "sha256-ud+3MGfVCp7unLYzQimItRM6lwhGrJKBHIrGcOCWKyM=",
+      "hash": "sha256-4SQJf74d07TYgskDnYfAJgFUYlHqi\/SqjjzpPy9fRx4=",
       "url": "deflate\/sqlcode.txt"
     },
     {
@@ -39,6 +39,22 @@
     {
       "hash": "sha256-4Yh4OTT5TEAPNyXEzOG+n5l2HPK294WFItz4SIelj88=",
       "url": "sample-data\/weather.json"
+    },
+    {
+      "hash": "sha256-6wjQHTEXj2QbgTmgSRffWSYUtTkfpXOT1C05jNI9iRE=",
+      "url": "sound\/correct.mp3"
+    },
+    {
+      "hash": "sha256-HJ24\/Lu8mOtEdVz5UwjZuiM5CG9ZSdIHY0rt7Tbbgm0=",
+      "url": "sound\/fail.mp3"
+    },
+    {
+      "hash": "sha256-GsJbSi39axCU\/FV3w1YXEQl2kVSdc1PARHhu6Xcbook=",
+      "url": "sound\/incorrect.mp3"
+    },
+    {
+      "hash": "sha256-3lz6B+D+b867Vinmp6bO46xoMURElPl7ewZjs2yQCVs=",
+      "url": "sound\/pass.mp3"
     },
     {
       "hash": "sha256-UwezpSZ5U6y5SoCmStNG9ekksy9a7X3WUO1Q0dwmEZ8=",
@@ -69,7 +85,7 @@
       "url": "_framework\/icudt.dat.br"
     },
     {
-      "hash": "sha256-+LlPijSWTB5to9CqWScKHY0elDIZDoYrp\/dM6izmt68=",
+      "hash": "sha256-2224lsMELRnWWzKqKljzCrcrLKKf82b9\/cOaIaUQCSE=",
       "url": "_framework\/blazor.boot.json.br"
     },
     {
@@ -165,7 +181,7 @@
       "url": "_framework\/Newtonsoft.Json.dll.br"
     },
     {
-      "hash": "sha256-PPsXyaDFWmlUBKbvEJ\/GwPod4NuO8CCJpLBa1sEZNd4=",
+      "hash": "sha256-UUglDhDaWQV7KT0CTGUbZ0w2kINckC5CpfqfVJlbqJc=",
       "url": "_framework\/QuizBlazor.dll.br"
     },
     {
@@ -1473,5 +1489,5 @@
       "url": "brotliloader.min.js"
     }
   ],
-  "version": "CGfPsU7a"
+  "version": "VfNlWpLl"
 };
