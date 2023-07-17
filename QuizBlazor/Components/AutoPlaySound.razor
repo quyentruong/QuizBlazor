@@ -1,0 +1,11 @@
+﻿@if (Src != null)
+{
+    <audio autoplay>
+        <source src="@Src" type="audio/mp3">
+    </audio>
+}
+
+@code {
+    [Parameter]
+    public string? Src { get; set; }
+}

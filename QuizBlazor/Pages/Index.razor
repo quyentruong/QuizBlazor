@@ -3,7 +3,6 @@
 
 <PageTitle>Index</PageTitle>
 
-
 @if (randomQuizzes != null && randomQuizzes.Count() > 0)
 {
     if (currentQuesNumber < randomQuizzes.Count())
@@ -55,22 +54,33 @@
                     <MudStack Row="false">
                         @if (selectedOption.Equals("False"))
                         {
+                            <AutoPlaySound Src="sound/incorrect.mp3" />
                             <MudText Color="Color.Error" Class="d-inline-flex" Typo="Typo.h5">Sorry, your answer is incorrect.</MudText>
                             <MudText Typo="Typo.h6" Color="Color.Dark">The correct answer is <MudMarkdown CodeBlockTheme="CodeBlockTheme.A11yLight" Value="@correctAnswer?.Name" /></MudText>
                         }
                         else if (selectedOption.Equals("True"))
                         {
+                            <AutoPlaySound Src="sound/correct.mp3" />
                             <MudText Color="Color.Success" Class="d-inline-flex" Typo="Typo.h5">Correct.</MudText>
                         }
                     </MudStack>
-                    <MudStack Row="true">
+                    <MudStack Row="false">
                         @if (currentQuesNumber == randomQuizzes.Count() - 1)
                         {
-                            <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Autorenew" Color="Color.Primary" OnClick="()=>Restart()">Restart</MudButton>
+                            if (totalInCorrect >= totalCorrect)
+                            {
+                                <AutoPlaySound Src="sound/fail.mp3" />
+                                <MudText Color="Color.Error"  Typo="Typo.h4">You failed the quiz.</MudText>
+                            } else
+                            {
+                                <AutoPlaySound Src="sound/pass.mp3" />
+                                <MudText Color="Color.Success"  Typo="Typo.h4">You passed the quiz.</MudText>
+                            }
+                            <MudButton Variant="Variant.Filled" Style="max-width:fit-content;" StartIcon="@Icons.Material.Filled.Autorenew" Color="Color.Primary" OnClick="()=>Restart()">Restart</MudButton>
                         }
                         else
                         {
-                            <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.ChevronRight" Color="Color.Info" OnClick="()=>NextQuestion()">Next Question</MudButton>
+                            <MudButton Variant="Variant.Filled" Style="max-width:fit-content;" StartIcon="@Icons.Material.Filled.ChevronRight" Color="Color.Info" OnClick="()=>NextQuestion()">Next Question</MudButton>
                         }
                     </MudStack>
 
