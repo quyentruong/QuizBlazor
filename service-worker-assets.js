@@ -85,7 +85,7 @@
       "url": "_framework\/icudt.dat.br"
     },
     {
-      "hash": "sha256-cN4hyI724RF2gDL84qo1fmW1OefxKoT2yEqBYDdW8BU=",
+      "hash": "sha256-fHUWyC4zFvO1U+A063ckv7T5L183XsZhD2S08aHntQY=",
       "url": "_framework\/blazor.boot.json.br"
     },
     {
@@ -181,7 +181,7 @@
       "url": "_framework\/Newtonsoft.Json.dll.br"
     },
     {
-      "hash": "sha256-tjNSuLKEdNH9\/VlL25VMnlVIr7\/4Ji+7xwyPCbMEPQU=",
+      "hash": "sha256-tjAjs\/uz+aUbQbad2fmf9bKkhfJL\/RbHWvkgjAxvnvQ=",
       "url": "_framework\/QuizBlazor.dll.br"
     },
     {
@@ -1489,5 +1489,5 @@
       "url": "brotliloader.min.js"
     }
   ],
-  "version": "tfWRI3Xu"
+  "version": "H8tlgycn"
 };
