@@ -27,6 +27,11 @@ public class Answer
     public string Name { get; set; }
     public bool IsCorrect { get; set; }
 
+    public string IsCorrectNumber(int i)
+    {
+        return $"{IsCorrect}_{i}";
+    }
+
     public override string ToString()
     {
         return $"{Name} (IsCorrect: {IsCorrect})";

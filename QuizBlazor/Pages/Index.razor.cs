@@ -19,22 +19,36 @@ namespace QuizBlazor.Pages
 
         private List<Quiz>? quizzes;
         private List<Quiz>? randomQuizzes;
+        private List<Answer>? shuffleAnswers;
+        private Answer? correctAnswer;
+        private Quiz? currentQuiz = null;
 
         protected override async Task OnInitializedAsync()
         {
             var quizDeflate = await Http.GetStringAsync("deflate/sqlcode.txt");
             quizzes = JsonConvert.DeserializeObject<List<Quiz>>(BasicUtility.DecompressStringDeflate(quizDeflate));
             randomQuizzes = quizzes?.RandomSubset(maxQuestion).ToList();
+            ShuffleAnswer();
+        }
+
+        private void ShuffleAnswer()
+        {
+            if (currentQuesNumber < randomQuizzes?.Count)
+            {
+                currentQuiz = randomQuizzes[currentQuesNumber];
+                shuffleAnswers = MoreEnumerable.Shuffle(currentQuiz.Answers).ToList();
+                correctAnswer = shuffleAnswers.Where(x => x.IsCorrect).FirstOrDefault();
+            }
         }
 
         private void OptionChanged(string selectedOption)
         {
             this.selectedOption = selectedOption;
-            if (selectedOption.Equals("True"))
+            if (selectedOption.Contains("True"))
             {
                 totalCorrect++;
             }
-            else if (selectedOption.Equals("False"))
+            else if (selectedOption.Contains("False"))
             {
                 totalInCorrect++;
             }
@@ -46,6 +60,7 @@ namespace QuizBlazor.Pages
         {
             currentQuesNumber++;
             isAnswer = false;
+            ShuffleAnswer();
         }
 
         public void Restart()
@@ -55,6 +70,7 @@ namespace QuizBlazor.Pages
             totalCorrect = 0;
             totalInCorrect = 0;
             isAnswer = false;
+            ShuffleAnswer();
         }
     }
 }
